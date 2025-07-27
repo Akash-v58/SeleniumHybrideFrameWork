@@ -57,7 +57,7 @@ public class BaseClass {
 	 driver.findElement(By.id("Email")).sendKeys(dataUtility.getDataFromProperties("username"));
 	 driver.findElement(By.id("Password")).sendKeys(dataUtility.getDataFromProperties("password"));
 	 driver.findElement(By.xpath("//input[@class='button-1 login-button']")).click();
-	 Assert.assertEquals(driver.getTitle(),"Demo Web Shop","shop page not displayed");
+	 Assert.assertEquals(driver.getTitle(),"Demo Web Shop. Login","shop page not displayed");
 	 }
 	 @AfterMethod(groups = {"smoke","Regression"})
 	 public void logout()
