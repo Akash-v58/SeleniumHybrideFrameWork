@@ -22,7 +22,7 @@ import elementrep.HomePage;
 
 public class BaseClass {
 	public static DataUtility dataUtility = new DataUtility();
-	public  WebDriver driver;
+	public   WebDriver driver;
 	
   
 	@Parameters("Browser")

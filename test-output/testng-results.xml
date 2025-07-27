@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-24T20:43:35 IST" name="Suite" finished-at="2025-06-24T20:44:57 IST" duration-ms="82922">
+  <suite started-at="2025-07-26T20:29:37 IST" name="Default suite" finished-at="2025-07-26T20:30:02 IST" duration-ms="25346">
     <groups>
       <group name="smoke">
-        <method signature="ToCheckAddAndRemoveFromCart.checkCart()[pri:0, instance:TestScripts.ToCheckAddAndRemoveFromCart@3571b748]" name="checkCart" class="TestScripts.ToCheckAddAndRemoveFromCart"/>
+        <method signature="ToCheckAddAndRemoveFromCart.checkCart()[pri:0, instance:TestScripts.ToCheckAddAndRemoveFromCart@f79e]" name="checkCart" class="TestScripts.ToCheckAddAndRemoveFromCart"/>
       </group> <!-- smoke -->
-      <group name="Regression">
-        <method signature="WishListAction.wishList()[pri:0, instance:TestScripts.WishListAction@1e178745]" name="wishList" class="TestScripts.WishListAction"/>
-        <method signature="WishListAction.wishList()[pri:0, instance:TestScripts.WishListAction@484970b0]" name="wishList" class="TestScripts.WishListAction"/>
-      </group> <!-- Regression -->
     </groups>
-    <test started-at="2025-06-24T20:43:35 IST" name="Test1" finished-at="2025-06-24T20:43:51 IST" duration-ms="16939">
-      <class name="TestScripts.WishListAction">
-        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:TestScripts.WishListAction@1e178745]" started-at="2025-06-24T20:43:35 IST" name="launchBrowser" finished-at="2025-06-24T20:43:38 IST" duration-ms="2958" status="PASS">
+    <test started-at="2025-07-26T20:29:37 IST" name="Default test" finished-at="2025-07-26T20:30:02 IST" duration-ms="25346">
+      <class name="TestScripts.ToCheckAddAndRemoveFromCart">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:TestScripts.ToCheckAddAndRemoveFromCart@f79e]" started-at="2025-07-26T20:29:37 IST" name="launchBrowser" finished-at="2025-07-26T20:29:39 IST" duration-ms="2051" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -25,114 +21,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="login()[pri:0, instance:TestScripts.WishListAction@1e178745]" started-at="2025-06-24T20:43:38 IST" name="login" finished-at="2025-06-24T20:43:45 IST" duration-ms="7255" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:TestScripts.ToCheckAddAndRemoveFromCart@f79e]" started-at="2025-07-26T20:29:39 IST" name="login" finished-at="2025-07-26T20:29:45 IST" duration-ms="6128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="wishList()[pri:0, instance:TestScripts.WishListAction@1e178745]" started-at="2025-06-24T20:43:45 IST" name="wishList" finished-at="2025-06-24T20:43:50 IST" duration-ms="4799" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- wishList -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:TestScripts.WishListAction@1e178745]" started-at="2025-06-24T20:43:50 IST" name="logout" finished-at="2025-06-24T20:43:51 IST" duration-ms="1426" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestScripts.WishListAction@1e178745]" started-at="2025-06-24T20:43:51 IST" name="closeBrowser" finished-at="2025-06-24T20:43:51 IST" duration-ms="381" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- TestScripts.WishListAction -->
-    </test> <!-- Test1 -->
-    <test started-at="2025-06-24T20:43:35 IST" name="Test3" finished-at="2025-06-24T20:43:55 IST" duration-ms="20000">
-      <class name="TestScripts.WishListAction">
-        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:TestScripts.WishListAction@484970b0]" started-at="2025-06-24T20:43:35 IST" name="launchBrowser" finished-at="2025-06-24T20:43:41 IST" duration-ms="6614" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="login()[pri:0, instance:TestScripts.WishListAction@484970b0]" started-at="2025-06-24T20:43:41 IST" name="login" finished-at="2025-06-24T20:43:48 IST" duration-ms="6286" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="wishList()[pri:0, instance:TestScripts.WishListAction@484970b0]" started-at="2025-06-24T20:43:48 IST" name="wishList" finished-at="2025-06-24T20:43:52 IST" duration-ms="4432" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- wishList -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:TestScripts.WishListAction@484970b0]" started-at="2025-06-24T20:43:52 IST" name="logout" finished-at="2025-06-24T20:43:53 IST" duration-ms="1217" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestScripts.WishListAction@484970b0]" started-at="2025-06-24T20:43:53 IST" name="closeBrowser" finished-at="2025-06-24T20:43:55 IST" duration-ms="1377" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- TestScripts.WishListAction -->
-    </test> <!-- Test3 -->
-    <test started-at="2025-06-24T20:43:35 IST" name="Test2" finished-at="2025-06-24T20:44:57 IST" duration-ms="82922">
-      <class name="TestScripts.ToCheckAddAndRemoveFromCart">
-        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:TestScripts.ToCheckAddAndRemoveFromCart@3571b748]" started-at="2025-06-24T20:43:35 IST" name="launchBrowser" finished-at="2025-06-24T20:44:26 IST" duration-ms="51707" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[FireFox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="login()[pri:0, instance:TestScripts.ToCheckAddAndRemoveFromCart@3571b748]" started-at="2025-06-24T20:44:26 IST" name="login" finished-at="2025-06-24T20:44:36 IST" duration-ms="9358" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="checkCart()[pri:0, instance:TestScripts.ToCheckAddAndRemoveFromCart@3571b748]" started-at="2025-06-24T20:44:36 IST" name="checkCart" finished-at="2025-06-24T20:44:53 IST" duration-ms="17486" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[All are not removed expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: All are not removed expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at TestScripts.ToCheckAddAndRemoveFromCart.checkCart(ToCheckAddAndRemoveFromCart.java:41)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1575)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="checkCart()[pri:0, instance:TestScripts.ToCheckAddAndRemoveFromCart@f79e]" started-at="2025-07-26T20:29:45 IST" name="checkCart" finished-at="2025-07-26T20:30:01 IST" duration-ms="15650" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkCart -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:TestScripts.ToCheckAddAndRemoveFromCart@3571b748]" started-at="2025-06-24T20:44:53 IST" name="logout" finished-at="2025-06-24T20:44:54 IST" duration-ms="1070" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:TestScripts.ToCheckAddAndRemoveFromCart@f79e]" started-at="2025-07-26T20:30:01 IST" name="logout" finished-at="2025-07-26T20:30:02 IST" duration-ms="1170" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestScripts.ToCheckAddAndRemoveFromCart@3571b748]" started-at="2025-06-24T20:44:54 IST" name="closeBrowser" finished-at="2025-06-24T20:44:57 IST" duration-ms="3224" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestScripts.ToCheckAddAndRemoveFromCart@f79e]" started-at="2025-07-26T20:30:02 IST" name="closeBrowser" finished-at="2025-07-26T20:30:02 IST" duration-ms="275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- TestScripts.ToCheckAddAndRemoveFromCart -->
-    </test> <!-- Test2 -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

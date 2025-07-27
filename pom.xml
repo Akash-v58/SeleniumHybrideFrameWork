@@ -12,7 +12,9 @@
           <version>3.5.3</version>
            <configuration>
    <suiteXmlFiles>
-   <suiteXmlFile>testng.xml</suiteXmlFile>
+   <suiteXmlFile>CrossBrowser.xml</suiteXmlFile>
+   <suiteXmlFile>BatchExecution.xml</suiteXmlFile>
+   <suiteXmlFile>GroupExecution.xml</suiteXmlFile>
    </suiteXmlFiles>
    </configuration>
         </plugin>
