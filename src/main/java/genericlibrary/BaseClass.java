@@ -8,7 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -36,13 +38,29 @@ public class BaseClass {
 	        driver = new ChromeDriver(options);
 			driver.manage().window().maximize();
 		} else if (browser.equals("FireFox")) {
-			driver = new FirefoxDriver();
+			FirefoxOptions firefoxOptions = new FirefoxOptions();
+            firefoxOptions.addArguments("-headless");
+            firefoxOptions.addArguments("--width=1920");
+            firefoxOptions.addArguments("--height=1080");
+            driver = new FirefoxDriver(firefoxOptions);
 			driver.manage().window().maximize();
 		} else if (browser.equals("Edge")) {
-			driver = new EdgeDriver();
+			EdgeOptions edgeOptions = new EdgeOptions();
+            edgeOptions.addArguments("headless");
+            edgeOptions.addArguments("disable-gpu"); // optional, useful for older versions
+            edgeOptions.addArguments("window-size=1920,1080");
+            driver = new EdgeDriver(edgeOptions);
 			driver.manage().window().maximize();
 		} else {
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+
+	        // Headless mode required for CI/CD like GitHub Actions
+	        options.addArguments("--headless=new"); // Use "--headless=new" for modern Chrome
+	        options.addArguments("--no-sandbox");
+	        options.addArguments("--disable-dev-shm-usage");
+	        options.addArguments("--window-size=1920,1080"); // optional: set screen size
+
+	        driver = new ChromeDriver(options);
 			driver.manage().window().maximize();
 		}
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
