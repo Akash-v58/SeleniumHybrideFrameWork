@@ -28,6 +28,7 @@
     <artifactId>selenium-java</artifactId>
     <version>4.33.0</version>
 </dependency>
+
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
@@ -53,5 +54,17 @@
     <artifactId>poi-ooxml</artifactId>
     <version>5.4.1</version>
 </dependency>
+<dependency>
+  <groupId>com.github.Akash-v58</groupId>
+  <artifactId>SeleniumHybrideFrameWork</artifactId>
+  <version>v1.0</version> <!-- or use 'master-SNAPSHOT' -->
+</dependency>
   </dependencies>
+  <repositories>
+  <repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+  </repository>
+</repositories>
+
 </project>
