@@ -1,23 +1,42 @@
-name: Maven Build on Commit
+name: Run Selenium Tests with Maven
 
 on:
   push:
-    branches:
-      - master  # Trigger on commit to the 'main' branch
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Set up Java
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'         # Change if you use another version
-          distribution: 'temurin'    # Most common distribution
+    - name: Set up Java 17
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
 
-      - name: Build with Maven
-        run: mvn clean test
+    - name: Install Chrome, ChromeDriver, Firefox, GeckoDriver
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          google-chrome-stable \
+          firefox \
+          chromedriver \
+          wget \
+          unzip
+        # Symlink chromedriver for global access
+        sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/local/bin/chromedriver || true
+        sudo chmod +x /usr/local/bin/chromedriver || true
+        which chromedriver
+        chromedriver --version
+        which google-chrome
+        google-chrome --version
+
+    - name: Run Maven tests
+      run: mvn clean test
