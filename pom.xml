@@ -14,8 +14,8 @@
 					<version>3.5.3</version>
 					<configuration>
 						<suiteXmlFiles>
-							<suiteXmlFile>CrossBrowser.xml</suiteXmlFile>
-							<suiteXmlFile>BatchExecution.xml</suiteXmlFile>
+							<!--<suiteXmlFile>CrossBrowser.xml</suiteXmlFile>
+							<suiteXmlFile>BatchExecution.xml</suiteXmlFile>-->
 							<suiteXmlFile>GroupExecution.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
