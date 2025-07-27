@@ -1,0 +1,23 @@
+name: Maven Build on Commit
+
+on:
+  push:
+    branches:
+      - master  # Trigger on commit to the 'main' branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'         # Change if you use another version
+          distribution: 'temurin'    # Most common distribution
+
+      - name: Build with Maven
+        run: mvn clean test

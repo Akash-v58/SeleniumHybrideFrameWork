@@ -25,5 +25,6 @@ public class HomePage {
 	public WebElement getReg() {
 		return reg;
 	}
+	//d
 	
 }
