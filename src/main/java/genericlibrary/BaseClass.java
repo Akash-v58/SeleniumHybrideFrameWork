@@ -22,11 +22,10 @@ import elementrep.HomePage;
 
 public class BaseClass {
 	public static DataUtility dataUtility = new DataUtility();
-	public   WebDriver driver;
-	
-  
+	public WebDriver driver;
+
 	@Parameters("Browser")
-	@BeforeClass(groups = {"smoke","Regression"})
+	@BeforeClass(groups = { "smoke", "Regression" })
 	public void launchBrowser(@Optional("Chrome") String browser) {
 		if (browser.equals("Chrome")) {
 			driver = new ChromeDriver();
@@ -44,24 +43,24 @@ public class BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
-	@AfterClass(groups = {"smoke","Regression"})
+	@AfterClass(groups = { "smoke", "Regression" })
 	public void closeBrowser() {
 		driver.quit();
 	}
-	 @BeforeMethod(groups = {"smoke","Regression"})
-	 public void login() throws IOException
-	 {
-	 driver.get(dataUtility.getDataFromProperties("url"));
-	 driver.findElement(By.xpath("//a[ @class = 'ico-login']")).click();
-	 Assert.assertEquals(driver.getTitle(),"Demo Web Shop. Login","login not displayed");
-	 driver.findElement(By.id("Email")).sendKeys(dataUtility.getDataFromProperties("username"));
-	 driver.findElement(By.id("Password")).sendKeys(dataUtility.getDataFromProperties("password"));
-	 driver.findElement(By.xpath("//input[@class='button-1 login-button']")).click();
-	 Assert.assertEquals(driver.getTitle(),"Demo Web Shop","shop page not displayed");
-	 }
-	 @AfterMethod(groups = {"smoke","Regression"})
-	 public void logout()
-	 {
-	 driver.findElement(By.xpath("//a[text()='Log out']")).click();
-	 }
+
+	@BeforeMethod(groups = { "smoke", "Regression" })
+	public void login() throws IOException {
+		driver.get(dataUtility.getDataFromProperties("url"));
+		driver.findElement(By.xpath("//a[ @class = 'ico-login']")).click();
+		Assert.assertEquals(driver.getTitle(), "Demo Web Shop. Login", "login not displayed");
+		driver.findElement(By.id("Email")).sendKeys(dataUtility.getDataFromProperties("username"));
+		driver.findElement(By.id("Password")).sendKeys(dataUtility.getDataFromProperties("password"));
+		driver.findElement(By.xpath("//input[@class='button-1 login-button']")).click();
+		Assert.assertEquals(driver.getTitle(), "Demo Web Shop", "shop page not displayed");
+	}
+
+	@AfterMethod(groups = { "smoke", "Regression" })
+	public void logout() {
+		driver.findElement(By.xpath("//a[text()='Log out']")).click();
+	}
 }

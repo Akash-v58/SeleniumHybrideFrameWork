@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test" parallel="methods">
+  <parameter name="Browser" value="Chrome"></parameter>
     <classes>
       <class name="TestScripts.ToCheckAddAndRemoveFromCart"/>
       <class name="TestScripts.WishListAction"/>
