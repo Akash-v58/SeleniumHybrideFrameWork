@@ -15,7 +15,7 @@
   </test> <!-- Test -->
   <test thread-count="5" name="Test3
   " parallel="tests">
-  <parameter name="Browser" value="Edge"></parameter>
+  <parameter name="Browser" value="FireFox"></parameter>
     <classes>
       <class name="TestScripts.WishListAction"/>
     </classes>
